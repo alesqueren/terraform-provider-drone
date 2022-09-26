@@ -57,13 +57,13 @@ func resourceCron() *schema.Resource {
 				Description: "The cron interval. Allowed values are `@daily`, `@weekly`, `@monthly`, and `@yearly`.",
 				Default:     "@monthly",
 				ForceNew:    true,
-				ValidateFunc: validation.StringInSlice([]string{
-					"@hourly",
-					"@daily",
-					"@weekly",
-					"@monthly",
-					"@yearly",
-				}, false),
+        // ValidateFunc: validation.StringInSlice([]string{
+				// 	"@hourly",
+				// 	"@daily",
+				// 	"@weekly",
+				// 	"@monthly",
+				// 	"@yearly",
+				// }, false),
 			},
 			"id": {
 				Description: "The string representation of the cron.",
